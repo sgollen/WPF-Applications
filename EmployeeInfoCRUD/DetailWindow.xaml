@@ -1,0 +1,44 @@
+﻿<Window x:Class="EmployeeInfo.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeInfo"
+        mc:Ignorable="d"
+        Title="Employee Details" Height="450" Width="800">
+    
+    <!-- Date: 10 Nov 20/18-->
+    <!-- Detail window for Employee-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!-- labels for title column-->
+        <Label Content=" Employee ID:" Grid.Row="0" Grid.Column="0" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+        <Label Content="Name:" Grid.Row="1" Grid.Column="0"  FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+        <Label Content="Position:" Grid.Row="2" Grid.Column="0"  FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+        <Label Content="Hourly Pay Rate:" Grid.Row="3" Grid.Column="0"  FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+
+        <!-- labels for data column containint values-->
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="5" Background="PapayaWhip" VerticalAlignment="Center">
+            <Label Content="{Binding SelectedEmployee.EmployeeID}"  FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="5" Background="LightBlue" VerticalAlignment="Center">
+            <Label Content="{Binding SelectedEmployee.Name}" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="5" Background="Salmon" VerticalAlignment="Center">
+            <Label Content="{Binding SelectedEmployee.Position}" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="5" Background="RosyBrown" VerticalAlignment="Center">
+            <Label Content="{Binding SelectedEmployee.HourlyPayRate}" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
